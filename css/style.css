@@ -2,15 +2,13 @@
     font-family: DryBrush;
     src: url(../fonts/DryBrush.ttf);
 }
-
 body {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.87);
 }
-
-.border-decoration {
+.border__decoration {
     border: 20px solid #F7F7F7;
     position: fixed;
     top: 0;
@@ -20,70 +18,134 @@ body {
     pointer-events: none;
     z-index: -1;
 }
-
+.menu__desktop {
+    padding: 0;
+    margin: 4%;
+    text-align: center;
+}
+.menu__desktop li {
+    display: inline;
+    list-style: none;
+}
+.menu__desktop a.special__link {
+    display:inline-block;
+    margin: 0 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color : rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 0px 0px #00FFA7 inset;
+    box-shadow: 0px 0px 0px 0px #00FFA7 inset;
+    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
+    transition: -webkit-box-shadow 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
+}
+.menu__desktop a.special__link:hover {
+    -webkit-box-shadow: 0px -20px 0px 0px #00FFA7 inset;
+    box-shadow: 0px -20px 0px 0px #00FFA7 inset;
+    color : rgba(0, 0, 0, 0.8);
+}
 @media (min-width: 800px) {
-    .border-decoration {
+    .border__decoration {
         top: 20px;
         left: 20px;
         right: 20px;
         bottom: 20px;
-    }
-    
-    }
-
-.title {
-    width: 30%;
+   }
+}
+.svg__title {
+    width: 35%;
     height: auto;
     display: block;
-    margin-top: 10%;
+    margin-top: 0%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 2;
 }
-
-.me {
-    width: 25%;
+.svg__title:hover {
+    -webkit-animation: ctabounce1 400ms ease-in-out forwards;
+    animation: ctabounce1 400ms ease-in-out forwards;
+}
+.image__title {
+    width: 35%;
     height: auto;
     display: block;
-    margin-top: -3%;
+    margin-top: -4%;
     margin-left: 44%;
     position: relative;
     margin-right: auto;
     z-index: 1;
 }
-
 .lead {
     font-size: 18px;
     line-height: 38px;
     margin-top: -16px;
     max-width: 234px;
-    margin-bottom: 10px; }
-    @media (min-width: 800px) {
-      .lead {
+    margin-bottom: 10px;
+}
+@media (min-width: 800px) {
+    .lead {
         margin-top: -152px;
         margin-left: 36%;
         display: block;
         margin-right: auto;
         position: relative;
         z-index: 2;
-        } }
-    .lead span {
-      background: #EDEDED;
-      display: inline; }
-
-a.special-link,
+   }
+}
+.lead span {
+    background: #EDEDED;
+    display: inline;
+}
 a.special-link {
-  display: inline;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.87);
-  -webkit-box-shadow: 0px -3px 0px 0px #00FFA7 inset;
-          box-shadow: 0px -3px 0px 0px #00FFA7 inset;
-  -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
-  transition: -webkit-box-shadow 150ms ease-in-out;
-  transition: box-shadow 150ms ease-in-out;
-  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out; }
-  a.special-link:hover,
-  a.special-link:hover {
+    display: inline;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-box-shadow: 0px -3px 0px 0px #00FFA7 inset;
+    box-shadow: 0px -3px 0px 0px #00FFA7 inset;
+    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
+    transition: -webkit-box-shadow 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
+}
+a.special-link:hover, a.special-link:hover {
     -webkit-box-shadow: 0px -16px 0px 0px #00FFA7 inset;
-            box-shadow: 0px -16px 0px 0px #00FFA7 inset; }
+    box-shadow: 0px -16px 0px 0px #00FFA7 inset;
+}
+@-webkit-keyframes ctabounce1 {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+   }
+    40% {
+        -webkit-transform: translate(0px, -12px);
+        transform: translate(0px, -12px);
+   }
+    80% {
+        -webkit-transform: translate(0px, 2px);
+        transform: translate(0px, 2px);
+   }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+   }
+}
+@keyframes ctabounce1 {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+   }
+    40% {
+        -webkit-transform: translate(0px, -12px);
+        transform: translate(0px, -12px);
+   }
+    80% {
+        -webkit-transform: translate(0px, 2px);
+        transform: translate(0px, 2px);
+   }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+   }
+}
