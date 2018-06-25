@@ -77,6 +77,57 @@ body {
     margin-right: auto;
     z-index: 1;
 }
+
+.social__link {
+    width: 27px;
+    height: auto;
+    display: inline-block;
+    margin: 7px 15px 0 0;
+    text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .menu__desktop {
+        display: none;
+    }
+    
+    .svg__title {
+        width: 113%;
+        height: auto;
+        display: block;
+        margin-top: 20%;
+        margin-left: -35px;
+        margin-right: auto;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .image__title {
+        width: 95%;
+        height: auto;
+        display: block;
+        margin-top: -13%;
+        margin-left: 7%;
+        position: relative;
+        margin-right: auto;
+        z-index: 1;
+    }
+    
+    .lead {
+        font-size: 21px;
+        line-height: 45px;
+        max-width: 280px;
+        margin-bottom: 10px;
+        margin-top: -5%;
+        margin-left: 15%;
+        display: block;
+        margin-right: auto;
+        position: relative;
+        z-index: 2;
+    }
+    
+}
+
 .lead {
     font-size: 18px;
     line-height: 38px;
