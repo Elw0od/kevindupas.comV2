@@ -90,6 +90,21 @@ body {
     .menu__desktop {
         display: none;
     }
+
+    .menu__mobile {
+        padding: 0;
+        position: relative;
+        z-index: 12;
+        margin: 25px 0px -160px -15px;
+        list-style: none;
+        text-decoration: none;
+    }
+    .menu__mobile li {
+        position: relative;
+        display: block;
+        list-style: none;
+        text-decoration: none;
+    }
     
     .svg__title {
         width: 113%;
