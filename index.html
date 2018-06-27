@@ -10,27 +10,22 @@
 </head>
 <body>
     <div class="border__decoration"></div>
+    <div class="burger" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div class="menu__desktop">
-        <nav class="responsive-nav" id="js-responsive-nav">
-            <ul class="responsive-nav__list">
-                <li class="responsive-nav__item">
-                    <a href="#" class="responsive-nav__link special__link">Home</a>
-                </li>
-                        <li class="responsive-nav__item">
-                            <a href="#" class="responsive-nav__link special__link">About</a>
-                        </li>
-                        <li class="responsive-nav__item">
-                            <a href="#" class="responsive-nav__link special__link">Products</a>
-                        </li>
-                        <li class="responsive-nav__item">
-                            <a href="#" class="responsive-nav__link special__link">Company</a>
-                        </li>
-                        <li class="responsive-nav__item">
-                            <a href="#" class="responsive-nav__link special__link">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div  class="burger" id="nav-toggle">
+          </div>
+            <ul class="nav-items mobile-nav-hidden" id="nav-items">
+              <li class="nav-item"><a class="special__link" href="#">Nav Item</a></li>
+              <li class="nav-item"><a class="special__link" href="#">Nav Item</a></li>
+              <li class="nav-item"><a class="special__link" href="#">Nav Item</a></li>
+              <li class="nav-item"><a class="special__link" href="#">Nav Item</a></li>
+              <li class="nav-item"><a class="special__link" href="#">Nav Item</a></li>
+            </ul>
+     </div>
     <div class="container">
         <div class="row">
             <img src="svg/kevindupas.svg" alt="Kévin Dupas" class="svg__title">
@@ -46,14 +41,20 @@
         </div>
     </div>
 </body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script>
-var responsiveNav = document.getElementById('js-responsive-nav');
-var responsiveNavBreakpoint = 720;
+var navToggle = document.getElementById('nav-toggle');
+var navItems = document.getElementById('nav-items');
 
-responsiveNav.addEventListener('click', function(){
-    if(window.innerWidth < responsiveNavBreakpoint){
-        responsiveNav.classList.toggle("responsive-nav--open");
-    }
+navToggle.addEventListener('click', function(){
+  
+  navItems.classList.toggle('mobile-nav-hidden');
+
 });
+
+$('.burger').on('click', function() {
+  $(this).toggleClass('clicked');
+});
+
 </script>
 </html>
