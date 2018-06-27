@@ -11,23 +11,26 @@
 <body>
     <div class="border__decoration"></div>
     <div class="menu__desktop">
-        <ul>
-            <li><a class="special__link" href="http://">Home</a></li>
-            <li><a class="special__link" href="http://">DailyUI</a></li>
-            <li><a class="special__link" href="http://">Designs</a></li>
-            <li><a class="special__link" href="http://">Experiments</a></li>
-            <li><a class="special__link" href="http://">Contact</a></li>
-        </ul>
-    </div>
-    <div class="menu__mobile">
-            <ul>
-                <li><a class="special__link" href="http://">Home</a></li>
-                <li><a class="special__link" href="http://">DailyUI</a></li>
-                <li><a class="special__link" href="http://">Designs</a></li>
-                <li><a class="special__link" href="http://">Experiments</a></li>
-                <li><a class="special__link" href="http://">Contact</a></li>
-            </ul>
-        </div>
+        <nav class="responsive-nav" id="js-responsive-nav">
+            <ul class="responsive-nav__list">
+                <li class="responsive-nav__item">
+                    <a href="#" class="responsive-nav__link special__link">Home</a>
+                </li>
+                        <li class="responsive-nav__item">
+                            <a href="#" class="responsive-nav__link special__link">About</a>
+                        </li>
+                        <li class="responsive-nav__item">
+                            <a href="#" class="responsive-nav__link special__link">Products</a>
+                        </li>
+                        <li class="responsive-nav__item">
+                            <a href="#" class="responsive-nav__link special__link">Company</a>
+                        </li>
+                        <li class="responsive-nav__item">
+                            <a href="#" class="responsive-nav__link special__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
     <div class="container">
         <div class="row">
             <img src="svg/kevindupas.svg" alt="Kévin Dupas" class="svg__title">
@@ -43,4 +46,14 @@
         </div>
     </div>
 </body>
+<script>
+var responsiveNav = document.getElementById('js-responsive-nav');
+var responsiveNavBreakpoint = 720;
+
+responsiveNav.addEventListener('click', function(){
+    if(window.innerWidth < responsiveNavBreakpoint){
+        responsiveNav.classList.toggle("responsive-nav--open");
+    }
+});
+</script>
 </html>

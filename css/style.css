@@ -18,7 +18,16 @@ body {
     pointer-events: none;
     z-index: -1;
 }
-.menu__desktop {
+
+@media (min-width: 800px) {
+    .border__decoration {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+   }
+
+   .menu__desktop {
     padding: 0;
     margin: 4%;
     text-align: center;
@@ -45,13 +54,6 @@ body {
     box-shadow: 0px -20px 0px 0px #00FFA7 inset;
     color : rgba(0, 0, 0, 0.8);
 }
-@media (min-width: 800px) {
-    .border__decoration {
-        top: 20px;
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
-   }
 }
 .svg__title {
     width: 35%;
@@ -86,26 +88,95 @@ body {
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .menu__desktop {
-        display: none;
-    }
+.responsive-nav {
+  position: relative;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  color: #fff;
+  /* background-color: #f43059; */
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+}
+@media screen and (min-width: 720px) {
+  .responsive-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    color: #f43059;
+  }
+}
+.responsive-nav:after {
+  content: "☰";
+  font-size: 28px;
+  width: 1em;
+  color: #000000;
+  line-height: 1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+}
 
-    .menu__mobile {
+@media screen and (min-width: 720px) {
+  .responsive-nav:after {
+    content: normal;
+    content: none;
+  }
+}
+
+.responsive-nav--open {
+  overflow: visible;
+  z-index: 3;
+}
+
+@media screen and (min-width: 720px) {
+  .responsive-nav__list {
+    padding-top: 0;
+    position: static;
+    width: auto;
+    display: block;
+    background: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .responsive-nav__item {
+    display: inline-block;
+    border-top: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .responsive-nav__item {
+        border-top: 1px solid #f43059;
+        background-color: #f43059;
+        text-align: center;
+      }
+
+    .responsive-nav__list {
+        list-style: none;
+        margin: 0;
         padding: 0;
-        position: relative;
-        z-index: 12;
-        margin: 25px 0px -160px -15px;
-        list-style: none;
-        text-decoration: none;
-    }
-    .menu__mobile li {
-        position: relative;
+        padding-top: 44px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        border-radius: 3px;
+        z-index: -1;
+      }
+
+    .responsive-nav__link {
+        color: #fff;
         display: block;
-        list-style: none;
-        text-decoration: none;
-    }
-    
+        line-height: 44px;
+      }
+
     .svg__title {
         width: 113%;
         height: auto;
