@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="border__decoration"></div>
-    <div class="burger" id="nav-toggle">
+    <div class="burger burger-2" id="nav-toggle">
         <span></span>
         <span></span>
         <span></span>
@@ -51,8 +51,9 @@ navToggle.addEventListener('click', function(){
   navItems.classList.toggle('mobile-nav-hidden');
 
 });
-
-$('.burger').on('click', function() {
+</script>
+<script>
+    $('.burger').on('click', function() {
   $(this).toggleClass('clicked');
 });
 
