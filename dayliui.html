@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kevin Dupas dot com</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="border__decoration"></div>
+    <div class="burger burger-2" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="menu__desktop">
+        <div  class="burger" id="nav-toggle">
+          </div>
+            <ul class="nav-items mobile-nav-hidden" id="nav-items">
+              <li class="nav-item"><a class="special__link daily" href="index.html">home</a></li>
+              <li class="nav-item"><a class="special__link daily" href="dayliui.html">dailyui</a></li>
+              <li class="nav-item"><a class="special__link daily" href="designs.html">designs</a></li>
+              <li class="nav-item"><a class="special__link daily" href="social.html">social</a></li>
+              <li class="nav-item"><a class="special__link daily" href="contact.html">contact</a></li>
+            </ul>
+     </div>
+    <div class="container">
+        <div class="row">
+            <img src="svg/dailyui.svg" alt="Kévin Dupas" class="svg__title">
+        </div>
+        <div class="container__project">
+            <div class="project__wrap">
+                <div class="project__row one">
+                    <a href="https://lab.kevindupas.com/DailyUI/Two/" target="_blank">
+                        <img src="img/daily2.jpg" alt="" class="project__image">
+                        <h2 class="project__name">DailyUI #2</h2>
+                        <div class="project__date">Posted : 07.06.2018</div>
+                    </a>
+                </div>
+                <div class="project__row one">
+                    <a href="https://lab.kevindupas.com/DailyUI/One/" target="_blank">
+                        <img src="img/daily1.jpg" alt="" class="project__image">
+                        <h2 class="project__name">DailyUI #1</h2>
+                        <div class="project__date">Posted : 06.06.2018</div>
+                    </a>
+                </div>
+                <div class="project__row one">
+                    <a href="https://lab.kevindupas.com/viewer/" target="_blank">
+                        <img src="img/experience.jpg" alt="" class="project__image">
+                        <h2 class="project__name">360° Experience</h2>
+                        <div class="project__date">Posted : 26.05.2018</div>
+                    </a>
+                </div>
+                <div class="project__row two">
+                    <a href="http://www.florianetiozzo.com/" target="_blank">
+                        <img src="img/tiozzo.jpg" alt="" class="project__image">
+                        <h2 class="project__name">Floriane Tiozzo</h2>
+                        <div class="project__date">Posted : 23.03.2016</div>
+                    </a>
+                </div>
+                <div class="project__row two">
+                    <a href="http://cedimanche.com/" target="_blank">
+                        <img src="img/cedimanche.jpg" alt="" class="project__image">
+                        <h2 class="project__name">CeDimanche</h2>
+                        <div class="project__date">Posted : 08.09.2017</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+var navToggle = document.getElementById('nav-toggle');
+var navItems = document.getElementById('nav-items');
+
+navToggle.addEventListener('click', function(){
+  
+  navItems.classList.toggle('mobile-nav-hidden');
+
+});
+</script>
+<script>
+    $('.burger').on('click', function() {
+  $(this).toggleClass('clicked');
+});
+
+</script>
+</html>
