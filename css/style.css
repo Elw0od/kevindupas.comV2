@@ -63,12 +63,28 @@ h1 {
 .menu__desktop a.daily {
     -webkit-box-shadow: 0px 0px 0px 0px #e74c3c inset;
     box-shadow: 0px 0px 0px 0px #e74c3c inset;
-    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
 }
 .menu__desktop a.daily:hover {
     -webkit-box-shadow: 0px -20px 0px 0px #e74c3c inset;
     box-shadow: 0px -20px 0px 0px #e74c3c inset;
-    color : rgba(0, 0, 0, 0.8);
+}
+
+.menu__desktop a.design {
+    -webkit-box-shadow: 0px 0px 0px 0px #29abe2 inset;
+    box-shadow: 0px 0px 0px 0px #29abe2 inset;
+}
+.menu__desktop a.design:hover {
+    -webkit-box-shadow: 0px -20px 0px 0px #29abe2 inset;
+    box-shadow: 0px -20px 0px 0px #29abe2 inset;
+}
+
+.menu__desktop a.social {
+    -webkit-box-shadow: 0px 0px 0px 0px #d4145a inset;
+    box-shadow: 0px 0px 0px 0px #d4145a inset;
+}
+.menu__desktop a.social:hover {
+    -webkit-box-shadow: 0px -20px 0px 0px #d4145a inset;
+    box-shadow: 0px -20px 0px 0px #d4145a inset;
 }
 
 }
